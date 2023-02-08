@@ -144,6 +144,7 @@ https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js
       opacity: 0,
     },"-=")
     .call(()=>swapInfosClass(direction))
+    .call(() => initCardEvents())
     .fromTo(direction==='right' ? nextInfoEle.querySelectorAll('.text') : prevInfoEle.querySelectorAll('.text'),
     {
       opacity:0,
@@ -177,6 +178,11 @@ https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js
       prevInfoEle.classList.add('current--info')
       nextInfoEle.classList.add('previous--info')
     }
+  }
+
+  function initCardEvents(){
+    const currentCardEle = wrapperEle.querySelector('.current--card')
+    
   }
 </script>
 
